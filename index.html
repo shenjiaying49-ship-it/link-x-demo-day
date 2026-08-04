@@ -268,6 +268,16 @@
     letter-spacing: 0.5px;
   }
 
+  /* 幕/主题分隔标签 */
+  .agenda-act {
+    font-size: 11px;
+    color: var(--text-dim);
+    letter-spacing: 1px;
+    padding: 14px 0 4px;
+    border-bottom: 1px solid var(--line-soft);
+    font-weight: 600;
+  }
+
   /* ========== 交通指南 ========== */
   .traffic-block {
     margin-bottom: 18px;
@@ -343,17 +353,13 @@
   <!-- ========== 报名确认 ========== -->
   <div class="section">
     <div class="tag">LINK-X DEMO DAY</div>
-    <div class="h2">恭喜你，你的 Link-X Demo Day 报名已通过审核。</div>
+    <div class="h2">8 月 8 日，我们将在<strong>中关村国家自主创新示范区展示交易中心</strong>，与真正相信「why」的人一起，见证那些早期、甚至尚不完整却充满灵光的想法。</div>
   </div>
 
   <!-- ========== 活动信息 ========== -->
   <div class="section">
-    <div class="p">
-      8 月 8 日，我们将在<strong>中关村国家自主创新示范区展示交易中心</strong>，与真正相信「why」的人一起，见证那些早期、甚至尚不完整却充满灵光的想法。
-    </div>
-
     <div class="info-card">
-      <div class="row"><span class="label">时间</span><span>2026 年 8 月 8 日（周六）</span></div>
+      <div class="row"><span class="label">时间</span><span>2026 年 8 月 8 日（周六）· 9:00 签到 · 10:00 开场</span></div>
       <div class="row"><span class="label">地点</span><span>中关村国家自主创新示范区展示交易中心</span></div>
     </div>
   </div>
@@ -374,55 +380,95 @@
       </div>
 
       <div class="agenda-item">
-        <div class="agenda-time">09:30<span class="period">上午</span></div>
+        <div class="agenda-time">10:00<span class="period">上午</span></div>
         <div class="agenda-body">
-          <div class="agenda-name">灵光一闪 · 产业论坛</div>
+          <div class="agenda-name">开场</div>
+        </div>
+      </div>
+
+      <div class="agenda-item">
+        <div class="agenda-time">10:05<span class="period">上午</span></div>
+        <div class="agenda-body">
+          <div class="agenda-name">领导 &amp; 主办方致辞</div>
+        </div>
+      </div>
+
+      <!-- 第一幕 -->
+      <div class="agenda-act">第一幕：「灵光」—— 学术的想象力</div>
+
+      <div class="agenda-item">
+        <div class="agenda-time">10:15<span class="period">上午</span></div>
+        <div class="agenda-body">
+          <div class="agenda-name">主题分享①：从静态复刻到自主发现：自进化大模型定义下一代超级智能</div>
+          <div class="agenda-desc">陈勇超 · 清华大学人工智能学院助理教授</div>
+        </div>
+      </div>
+
+      <div class="agenda-item">
+        <div class="agenda-time">10:35<span class="period">上午</span></div>
+        <div class="agenda-body">
+          <div class="agenda-name">AI 青年科学家圆桌派：「我们这一代青年的"不可能任务"」</div>
           <div class="agenda-desc">
-            <span class="agenda-tag">世界模型</span>
-            <span class="agenda-tag">产业落地</span>
-            <span class="agenda-tag">投资估值</span><br>
-            三场主旨分享 + 圆桌对话
+            主持：赵昊 · 清华大学智能产业研究院（AIR）助理教授<br>
+            郑子隆 · 北京通用人工智能研究院语言交互实验室主任<br>
+            滕佳烨 · 上海财经大学统计与数据科学学院助理教授<br>
+            萧子豪 · 瑞莱智慧（RealAI）联合创始人
+          </div>
+        </div>
+      </div>
+
+      <!-- 第二幕 -->
+      <div class="agenda-act">第二幕：「落地」—— 产业的执行力</div>
+
+      <div class="agenda-item">
+        <div class="agenda-time">11:20<span class="period">上午</span></div>
+        <div class="agenda-body">
+          <div class="agenda-name">主题分享②：Agent 爆发，如何打造高品质 AI Token 工厂</div>
+          <div class="agenda-desc">艾智远 · 趋境科技创始人兼 CEO</div>
+        </div>
+      </div>
+
+      <div class="agenda-item">
+        <div class="agenda-time">11:40<span class="period">上午</span></div>
+        <div class="agenda-body">
+          <div class="agenda-name">线下《陈词蓝调》圆桌：「AI 的"陈词"与"蓝调"：当共识成为偏见」</div>
+          <div class="agenda-desc">
+            主持：陈宝权 · 北京大学博雅特聘教授、ACM/IEEE Fellow<br>
+            唐博 · 香港科技大学金融研究院助理院长<br>
+            杨梦月 · 布里斯托大学助理教授<br>
+            陆弘远 · 脸谱心智创始人<br>
+            王璞 · 星连资本合伙人
           </div>
         </div>
       </div>
 
       <div class="agenda-item">
-        <div class="agenda-time">11:30<span class="period">中午</span></div>
+        <div class="agenda-time">12:30<span class="period">中午</span></div>
         <div class="agenda-body">
-          <div class="agenda-name">闪电 Pitch · 3 分钟路演</div>
-          <div class="agenda-desc">10 支新锐 AI 创业团队极速展示</div>
+          <div class="agenda-name">午餐 / 休息</div>
+          <div class="agenda-desc">嘉宾自由交流</div>
         </div>
       </div>
 
-      <div class="agenda-item">
-        <div class="agenda-time">12:00<span class="period">中午</span></div>
-        <div class="agenda-body">
-          <div class="agenda-name">午休 · 自助午餐</div>
-          <div class="agenda-desc">展区自由交流</div>
-        </div>
-      </div>
+      <!-- 下午 -->
+      <div class="agenda-act">从蓝图到真金白银：创新项目的破局时刻</div>
 
       <div class="agenda-item">
         <div class="agenda-time">14:00<span class="period">下午</span></div>
         <div class="agenda-body">
-          <div class="agenda-name">深度路演 · 主舞台</div>
-          <div class="agenda-desc">5 支入选团队 · 每队 15 分钟深度 pitch · 评委点评</div>
+          <div class="agenda-name">深度路演（4 会场）</div>
+          <div class="agenda-desc">超 60 家企业按「芯、算、模、用」15 分钟路演</div>
         </div>
       </div>
 
-      <div class="agenda-item">
-        <div class="agenda-time">15:30<span class="period">下午</span></div>
-        <div class="agenda-body">
-          <div class="agenda-name">互动体验展区</div>
-          <div class="agenda-desc">60+ 团队 · 4 大主题区域（芯 / 算 / 模 / 用）· 自由观展</div>
-        </div>
-      </div>
+      <!-- 晚间 -->
+      <div class="agenda-act">从破局到共生：Spark Night 火花之夜</div>
 
       <div class="agenda-item">
         <div class="agenda-time">18:30<span class="period">晚间</span></div>
         <div class="agenda-body">
-          <div class="agenda-name">Spark Night · 微醺派对</div>
-          <div class="agenda-desc">Hack Party · 极客盲盒 · 自由社交</div>
+          <div class="agenda-name">技术人狂欢 Party</div>
+          <div class="agenda-desc">嘉宾自由交流</div>
         </div>
       </div>
 
@@ -487,7 +533,10 @@
   <div class="organizer">
     <div class="organizer-name">Link-X Demo Day 组委会</div>
     <div class="organizer-desc">
-      星连资本 LINKX CAPITAL<span class="sep">×</span>华清普智 AI 孵化器
+      指导单位：中关村科学城公司
+    </div>
+    <div class="organizer-desc" style="margin-top:4px;">
+      主办单位：星连资本 LINKX CAPITAL<span class="sep">×</span>华清普智 AI 孵化器
     </div>
   </div>
 
