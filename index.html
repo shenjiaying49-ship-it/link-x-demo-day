@@ -35,68 +35,164 @@
     border: 1px solid var(--line);
   }
 
-  /* ========== Hero 区 ========== */
+  /* ========== Hero 区（短宽版） ========== */
   .hero {
     background: var(--bg-black);
     color: #fff;
-    padding: 48px 40px 44px;
-    display: grid;
-    grid-template-columns: 1fr auto;
-    gap: 24px;
-    align-items: center;
+    padding: 38px 40px 30px;
     position: relative;
     overflow: hidden;
+    text-align: center;
   }
-
-  .hero-text {
-    font-size: 15px;
-    line-height: 1.85;
-  }
-  .hero-text .en {
-    color: #fff;
-    margin-bottom: 2px;
-  }
-  .hero-text .zh {
-    color: #d8d8d8;
-    margin-bottom: 8px;
-  }
-  .hero-text .accent {
-    color: #fff;
-    margin-top: 16px;
-    margin-bottom: 4px;
-  }
-  .hero-text .name {
-    color: #fff;
-    font-size: 17px;
-    font-weight: 600;
-    margin-top: 4px;
-  }
-
-  /* 「灵光一闪」艺术字 */
-  .hero-mark {
-    font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
-    font-weight: 900;
-    font-size: 64px;
-    line-height: 0.95;
-    color: #fff;
-    text-align: right;
-    letter-spacing: 2px;
-    text-shadow:
-      0 0 18px rgba(255,255,255,0.6),
-      0 0 36px rgba(255,255,255,0.25);
-    flex-shrink: 0;
-    position: relative;
-  }
-  .hero-mark::after {
+  .hero::before {
     content: "";
     position: absolute;
-    top: -8px;
-    right: 56%;
-    width: 60px;
-    height: 60px;
-    background: radial-gradient(circle, rgba(255,255,255,0.9) 0%, transparent 60%);
-    filter: blur(8px);
+    top: 0; left: 0; right: 0; bottom: 0;
+    background:
+      radial-gradient(circle at 20% 30%, rgba(120,120,180,0.10) 0%, transparent 35%),
+      radial-gradient(circle at 80% 70%, rgba(180,120,180,0.10) 0%, transparent 35%);
     pointer-events: none;
+  }
+
+  .hero-art {
+    position: relative;
+    display: inline-flex;
+    flex-direction: column;
+    gap: 6px;
+    font-family: "Songti SC", "STSong", "STSongti-SC-Black", "SimSun", "PingFang SC", "Microsoft YaHei", serif;
+    font-weight: 700;
+    line-height: 1;
+  }
+  .hero-row {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+  }
+  .hero-art .ch {
+    font-size: 72px;
+    color: #fff;
+    letter-spacing: 0;
+    text-shadow: 0 0 12px rgba(255,255,255,0.15);
+  }
+  .hero-art .sparkle {
+    position: relative;
+    display: inline-block;
+  }
+  /* 闪 字上的星光 */
+  .hero-art .sparkle::before {
+    content: "";
+    position: absolute;
+    top: 22%;
+    left: 85%;
+    width: 280px;
+    height: 280px;
+    background:
+      radial-gradient(circle at center, rgba(255,255,255,1) 0%, rgba(255,255,255,0.7) 4%, rgba(255,255,255,0.2) 12%, transparent 22%),
+      radial-gradient(2px 2px at 50% 50%, #fff 0%, transparent 100%),
+      conic-gradient(from 0deg,
+        transparent 0deg, rgba(255,255,255,0.85) 2deg, rgba(255,255,255,0.3) 4deg, transparent 6deg,
+        transparent 60deg, rgba(255,255,255,0.6) 62deg, transparent 64deg,
+        transparent 120deg, rgba(255,255,255,0.7) 122deg, transparent 124deg,
+        transparent 178deg, rgba(255,255,255,0.85) 180deg, transparent 182deg,
+        transparent 238deg, rgba(255,255,255,0.6) 240deg, transparent 242deg,
+        transparent 298deg, rgba(255,255,255,0.7) 300deg, transparent 302deg);
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    filter: blur(0.6px);
+    mix-blend-mode: screen;
+    z-index: 2;
+  }
+  /* 中心亮点 */
+  .hero-art .sparkle::after {
+    content: "";
+    position: absolute;
+    top: 18%;
+    left: 90%;
+    width: 14px;
+    height: 14px;
+    background: radial-gradient(circle, #fff 0%, rgba(255,255,255,0.8) 30%, transparent 70%);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 3;
+    box-shadow:
+      -40px -10px 0 -4px rgba(255,255,255,0.9),
+      35px 8px 0 -4px rgba(255,255,255,0.85),
+      -8px 30px 0 -5px rgba(255,255,255,0.7),
+      20px -25px 0 -5px rgba(255,255,255,0.6),
+      50px 25px 0 -6px rgba(255,255,255,0.5);
+  }
+
+  .hero-sub {
+    margin-top: 18px;
+    font-size: 11px;
+    letter-spacing: 4px;
+    color: #aaa;
+    text-transform: uppercase;
+    font-weight: 500;
+    position: relative;
+  }
+
+  /* ========== 时间高亮块 ========== */
+  .time-callout {
+    display: flex;
+    align-items: stretch;
+    background: var(--bg-black);
+    color: #fff;
+    margin: 22px 0 8px;
+    border-radius: 2px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  }
+  .time-block {
+    flex: 1;
+    padding: 22px 12px;
+    text-align: center;
+  }
+  .time-num {
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    line-height: 1;
+    font-feature-settings: "tnum";
+  }
+  .time-label {
+    font-size: 11.5px;
+    color: #b0b0b0;
+    letter-spacing: 3px;
+    margin-top: 8px;
+  }
+  .time-divider {
+    width: 1px;
+    background: #2a2a2a;
+    margin: 14px 0;
+  }
+
+  /* ========== 二维码区 ========== */
+  .qr-section {
+    text-align: center;
+    padding: 24px 20px 8px;
+    background: var(--card-grey);
+    margin: 20px 0 8px;
+    border-radius: 2px;
+  }
+  .qr-img-wrap {
+    background: #fff;
+    padding: 12px;
+    display: inline-block;
+    border: 1px solid var(--line);
+  }
+  .qr-img-wrap img {
+    display: block;
+    width: 160px;
+    height: 160px;
+  }
+  .qr-caption {
+    margin-top: 12px;
+    font-size: 12.5px;
+    color: var(--text-soft);
+    letter-spacing: 1px;
+    line-height: 1.7;
   }
 
   /* ========== 入场券按钮 ========== */
@@ -382,28 +478,48 @@
 
   <!-- ========== Hero ========== -->
   <div class="hero">
-    <div class="hero-text">
-      <div class="en">Hi, AI 同行者，</div>
-      <div class="en">AHA! THAT'S IT.</div>
-      <div class="zh">那个瞬间，模型突然理解了；</div>
-      <div class="zh">那个临界点，能力发生了质变。</div>
-      <div class="zh">你选择了 sign up to change the world.</div>
-      <div class="accent">我们把这一秒叫做：</div>
+    <div class="hero-art">
+      <div class="hero-row">
+        <span class="ch">灵</span><span class="ch">光</span>
+      </div>
+      <div class="hero-row">
+        <span class="ch">一</span><span class="ch sparkle">闪</span>
+      </div>
     </div>
-    <div class="hero-mark">灵光<br>一闪</div>
+    <div class="hero-sub">SPARK&nbsp;·&nbsp;MOMENT&nbsp;·&nbsp;2026</div>
   </div>
 
   <!-- ========== 报名确认 ========== -->
   <div class="section">
     <div class="tag">LINK-X DEMO DAY</div>
     <div class="h2">Link-X Demo Day 2026 · 灵光一闪</div>
-    <div class="h2" style="font-size:20px;margin-top:8px;">⏰ 9:00 签到入场 · 10:00 活动开始</div>
+
+    <!-- 时间高亮块 -->
+    <div class="time-callout">
+      <div class="time-block">
+        <div class="time-num">09:00</div>
+        <div class="time-label">签到入场</div>
+      </div>
+      <div class="time-divider"></div>
+      <div class="time-block">
+        <div class="time-num">10:00</div>
+        <div class="time-label">活动开始</div>
+      </div>
+    </div>
+
+    <!-- 活动二维码 -->
+    <div class="qr-section">
+      <div class="qr-img-wrap">
+        <img src="qr.png" alt="活动二维码">
+      </div>
+      <div class="qr-caption">扫码查看实时议程 · 现场互动</div>
+    </div>
   </div>
 
   <!-- ========== 活动信息 ========== -->
   <div class="section">
     <div class="info-card">
-      <div class="row"><span class="label">时间</span><span>2026 年 8 月 8 日（周六）· 9:00 签到 · 10:00 开场</span></div>
+      <div class="row"><span class="label">时间</span><span>2026 年 8 月 8 日（周六）</span></div>
       <div class="row"><span class="label">地点</span><span>中关村国家自主创新示范区展示交易中心</span></div>
     </div>
   </div>
@@ -424,7 +540,7 @@
     </div>
 
     <div class="invite-skip">
-      <strong>💡 已报名参会者：</strong>若你此前已收到过邀请函或已完成扫码登记，可直接忽略以上邀请部分，向下查看<strong>日程安排</strong>与<strong>交通指南</strong>即可。
+      <strong>已报名参会者：</strong>若你此前已收到过邀请函或已完成扫码登记，可直接忽略以上邀请部分，向下查看<strong>日程安排</strong>与<strong>交通指南</strong>即可。
     </div>
   </div>
 
